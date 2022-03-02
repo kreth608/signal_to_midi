@@ -1,0 +1,18 @@
+#N canvas 941 25 499 423 12;
+#X obj 408 35 f \$1;
+#X obj 408 13 loadbang;
+#X obj 269 13 r SEND_ALL_CHANNELS;
+#X text 14 9 Creation Arguments:;
+#X text 13 27 \$0 -- unique local variable;
+#X text 12 46 \$1 -- channel #;
+#X obj 298 202 vsl 15 128 0 127 0 0 empty empty empty 0 -9 0 10 #fcfcfc
+#000000 #000000 0 1;
+#X obj 298 335 general_cc 10 \$1 Volume;
+#X text 288 49 Channel;
+#X obj 77 133 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000;
+#X obj 75 163 doctor_note_test 3;
+#X connect 1 0 0 0;
+#X connect 2 0 0 0;
+#X connect 6 0 7 0;
+#X connect 9 0 10 0;
