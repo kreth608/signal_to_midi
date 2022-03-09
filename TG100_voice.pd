@@ -1,18 +1,22 @@
-#N canvas 941 25 499 423 12;
-#X obj 408 35 f \$1;
-#X obj 408 13 loadbang;
-#X obj 269 13 r SEND_ALL_CHANNELS;
-#X text 14 9 Creation Arguments:;
-#X text 13 27 \$0 -- unique local variable;
-#X text 12 46 \$1 -- channel #;
-#X obj 298 202 vsl 15 128 0 127 0 0 empty empty empty 0 -9 0 10 #fcfcfc
-#000000 #000000 0 1;
-#X obj 298 335 general_cc 10 \$1 Volume;
-#X text 288 49 Channel;
-#X obj 77 133 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000;
-#X obj 75 163 doctor_note_test 3;
+#N canvas 962 29 367 405 12;
+#X obj 281 103 f \$1;
+#X obj 281 81 loadbang;
+#X obj 142 81 r SEND_ALL_CHANNELS;
+#X text 35 45 Creation Arguments:;
+#X text 33 82 \$1 -- channel #;
+#X text 228 103 Channel;
+#X obj 33 212 general_cc 10 \$1 Panning;
+#X obj 33 108 doctor_note_test \$1;
+#X obj 33 253 general_cc 11 \$1 Volume;
+#X obj 33 171 general_cc 1 \$1 Mod_Wheel;
+#X obj 172 212 general_cc 5 \$1 Porta_Time;
+#X obj 172 253 general_cc 65 \$1 Porta_Toggle;
+#X obj 33 132 notes_off_mono_poly \$1;
+#X obj 33 294 general_cc 91 \$1 Reverb_Send;
+#X obj 172 294 send_note \$1;
+#X obj 172 352 print TG_\$1_noteout;
+#X text 34 63 (\$0 -- unique local variable);
 #X connect 1 0 0 0;
 #X connect 2 0 0 0;
-#X connect 6 0 7 0;
-#X connect 9 0 10 0;
+#X connect 14 0 15 0;
+#X coords 0 405 1 404 85 60 0;

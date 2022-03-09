@@ -1,0 +1,24 @@
+#N canvas 732 490 450 300 12;
+#X obj 118 83 inlet;
+#X obj 118 209 bendout \$1;
+#X obj 145 104 i;
+#X obj 118 104 -;
+#X obj 70 188 outlet;
+#X text 33 240 assuming instrument has pitch-bend range of +/-2 semitones
+;
+#X text 29 262 convert decimal of incoming note to add 1 semitone;
+#X obj 166 125 outlet;
+#X obj 157 146 inlet;
+#X obj 118 167 spigot;
+#X obj 118 188 i;
+#X obj 118 125 * 4096;
+#X connect 0 0 2 0;
+#X connect 0 0 3 0;
+#X connect 2 0 3 1;
+#X connect 2 0 7 0;
+#X connect 3 0 11 0;
+#X connect 8 0 9 1;
+#X connect 9 0 10 0;
+#X connect 10 0 4 0;
+#X connect 10 0 1 0;
+#X connect 11 0 9 0;

@@ -1,4 +1,4 @@
-#N canvas -68 135 917 803 12;
+#N canvas 0 69 917 803 12;
 #N canvas 643 572 450 300 random_int 0;
 #X obj 81 71 bng 25 50 10 0 empty empty Generate\\\ Random\\\ Integer
 29 16 1 20 #ffffff #00ff04 #000000;
@@ -169,7 +169,7 @@
 #X connect 10 0 11 0;
 #X connect 11 0 9 0;
 #X restore 201 320 pd volume_adjust;
-#X obj 640 270 hradio 10 1 0 16 empty empty Channel 0 -8 1 10 #fcfcfc
+#X obj 625 298 hradio 10 1 0 16 empty empty Channel 0 -8 1 10 #fcfcfc
 #000000 #000000 0;
 #N canvas 326 357 450 300 all_notes_off 0;
 #X obj 128 98 pack f f f;
@@ -195,9 +195,9 @@
 #X connect 7 0 0 1;
 #X connect 8 0 6 0;
 #X connect 9 0 0 0;
-#X restore 620 282 pd all_notes_off;
-#X floatatom 738 283 5 0 0 0 - - - 0;
-#X obj 620 265 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#X restore 605 310 pd all_notes_off;
+#X floatatom 723 311 5 0 0 0 - - - 0;
+#X obj 605 293 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
 #000000 #000000;
 #X obj 162 578 env~;
 #X floatatom 162 599 5 0 0 0 - - - 0;

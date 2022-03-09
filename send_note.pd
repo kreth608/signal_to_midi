@@ -1,0 +1,33 @@
+#N canvas 125 156 428 419 12;
+#X obj 102 79 pack f f \$1;
+#X obj 185 79 pipe 1000;
+#X msg 254 79 \$1 0;
+#X listbox 102 102 10 0 0 0 - - - 0;
+#X obj 105 122 hsl 128 15 10 1000 1 0 empty empty note_length 75 -8
+1 10 #fcfcfc #000000 #000000 0 1;
+#X obj 45 123 noteout;
+#X obj 63 37 r \$1-note;
+#X obj 139 16 r \$1-velocity;
+#X obj 52 102 outlet;
+#X text 224 40 Creation Arguments:;
+#X text 220 60 \$1 -- channel #;
+#X obj 102 139 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#X obj 122 139 hsl 50 15 0 4096 0 0 empty empty pitch_bend 54 10 1
+10 #fcfcfc #000000 #000000 0 1;
+#X obj 63 58 pitch_to_pitchbend \$1;
+#X obj 139 37 i;
+#X connect 0 0 3 0;
+#X connect 0 0 5 0;
+#X connect 0 0 8 0;
+#X connect 1 0 2 0;
+#X connect 2 0 0 0;
+#X connect 4 0 1 1;
+#X connect 6 0 13 0;
+#X connect 7 0 14 0;
+#X connect 11 0 13 1;
+#X connect 13 0 12 0;
+#X connect 13 1 0 0;
+#X connect 13 1 1 0;
+#X connect 14 0 0 1;
+#X coords 0 -1 1 1 137 56 2 100 100;

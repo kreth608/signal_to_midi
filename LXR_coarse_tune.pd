@@ -1,0 +1,29 @@
+#N canvas 826 457 336 256 12;
+#X obj 29 11 inlet;
+#X obj 29 32 i;
+#X obj 29 53 -;
+#X obj 29 95 i;
+#X listbox 77 137 20 0 0 0 - - - 0;
+#X obj 29 137 ctlout;
+#X obj 59 57 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 #fcfcfc
+#000000 #000000 0 1;
+#X floatatom 56 96 5 0 0 0 - - - 0;
+#X obj 29 116 pack f \$1 \$2;
+#X text 17 162 Creation Arguments:;
+#X text 16 180 (\$0 -- unique local variable);
+#X text 15 199 \$1 -- CC fine-tune #;
+#X text 17 215 \$2 -- Port Channel 1 (i.e. 1 \, 17 \, 33 \, 49);
+#X obj 113 95 hsl 128 15 63 0 0 0 empty empty empty -2 -8 0 10 #fcfcfc
+#000000 #000000 0 1;
+#X obj 29 74 expr ($f1*$f2)+((128-$f2)/2)-$f3;
+#X connect 0 0 1 0;
+#X connect 0 0 2 0;
+#X connect 1 0 2 1;
+#X connect 2 0 14 0;
+#X connect 3 0 8 0;
+#X connect 6 0 14 1;
+#X connect 8 0 4 0;
+#X connect 8 0 5 0;
+#X connect 13 0 14 2;
+#X connect 14 0 3 0;
+#X connect 14 0 7 0;
