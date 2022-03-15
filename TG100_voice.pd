@@ -1,4 +1,4 @@
-#N canvas 962 29 367 405 12;
+#N canvas 586 140 367 405 12;
 #X obj 281 103 f \$1;
 #X obj 281 81 loadbang;
 #X obj 142 81 r SEND_ALL_CHANNELS;
@@ -16,7 +16,10 @@
 #X obj 172 294 send_note \$1;
 #X obj 172 352 print TG_\$1_noteout;
 #X text 34 63 (\$0 -- unique local variable);
+#X obj 315 103 f \$2;
+#X obj 172 171 pgm_change \$1 \$2;
 #X connect 1 0 0 0;
+#X connect 1 0 17 0;
 #X connect 2 0 0 0;
 #X connect 14 0 15 0;
 #X coords 0 405 1 404 85 60 0;

@@ -1,4 +1,4 @@
-#N canvas 530 415 454 320 12;
+#N canvas 531 547 454 320 12;
 #X obj 37 131 noteout;
 #X obj 37 68 r \$1-note;
 #X obj 74 89 r \$1-velocity;
@@ -24,6 +24,7 @@ only send pitch/tuning data (customizable);
 #X obj 349 72 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
 #000000 0 1;
 #X text 237 49 turn this off if using \$1-note;
+#X text 186 132 you have to set patch^^ this yourself;
 #X connect 1 0 8 0;
 #X connect 1 0 15 0;
 #X connect 2 0 8 1;
